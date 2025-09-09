@@ -1,0 +1,83 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#FFBD00",
+          "style": "plain",
+          "template": " \u26a1 ",
+          "type": "root"
+        },
+        {
+          "background": "#3A3A3A",
+          "foreground": "#ffffff",
+          "style": "powerline",
+          "template": "{{ if .WSL }}WSL at{{ end }} {{.Icon}} ",
+          "type": "os"
+        },
+        {
+          "background": "#458588",
+          "foreground": "#282828",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "style": "full"
+          },
+          "style": "powerline",
+          "template": " {{ .Path }}",
+          "type": "path"
+        },
+        {
+          "foreground": "#98C379",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": " <#ffffff>via</> \ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "type": "node"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#85C980",
+          "style": "diamond",
+          "template": "RAM:{{ (div ((sub .PhysicalTotalMemory .PhysicalAvailableMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB ",
+          "trailing_diamond": " ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#ffffff",
+          "leading_diamond": "\u250b",
+          "properties": {
+            "style": "roundrock",
+            "threshold": 0
+          },
+          "style": "diamond",
+          "template": " {{ .FormattedMs }} ",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#FFBD00",
+          "style": "plain",
+          "template": "\u2b9e ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 3
+}
