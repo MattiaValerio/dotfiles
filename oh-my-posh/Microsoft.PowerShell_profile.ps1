@@ -73,3 +73,6 @@ function c { clear }
 
 # q -> scorciatoia per "exit"
 function q { exit }
+
+# exp -> apre la cartella corrente nell'explorer
+function exp { explorer . }
