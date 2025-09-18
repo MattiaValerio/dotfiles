@@ -70,3 +70,6 @@ function gpl { git pull $args }
 
 # c -> scorciatoia per "clear"
 function c { clear }
+
+# q -> scorciatoia per "exit"
+function q { exit }
